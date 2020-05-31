@@ -177,7 +177,6 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8000))   # Use PORT if it's there.
     server_address = ('', port)
     #server_address = ('', 8000)
-    server_address = ('', 8000)
     #httpd = ThreadHTTPServer(server_address, Shortener)
     httpd = http.server.HTTPServer(server_address, Shortener)
     httpd.serve_forever()
