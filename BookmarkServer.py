@@ -178,6 +178,6 @@ if __name__ == '__main__':
     server_address = ('', port)
     #server_address = ('', 8000)
     server_address = ('', 8000)
-    httpd = ThreadHTTPServer(server_address, Shortener)
-    #httpd = http.server.HTTPServer(server_address, Shortener)
+    #httpd = ThreadHTTPServer(server_address, Shortener)
+    httpd = http.server.HTTPServer(server_address, Shortener)
     httpd.serve_forever()
